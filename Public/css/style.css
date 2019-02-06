@@ -1,13 +1,90 @@
+form .form-icons {
+  text-align: center;
+}
+
+form .form-icons h4 {
+  margin-bottom: 1rem;
+}
+
+form .form-icons .input-group-label {
+  background-color: #1779ba;
+  border-color: #1779ba;
+}
+
+form .form-icons .input-group-field {
+  border-color: #1779ba;
+}
+
+form .form-icons .fa {
+  color: white;
+  width: 1rem;
+}
+.primary
+{
+	background-image: url('https://cdn.pixabay.com/photo/2016/01/09/18/27/old-1130731_1280.jpg');
+	height: 30em;
+}
+
+.top-bar
+{
+	background-color: black;
+	color: white;
+	height:4em;
+	padding:10px;
+}
+
+.top-bar li
+{
+	background-color: black;
+}
+
+.presentation
+{
+	text-align: justify;
+	text-align: center;
+
+	align-content: center;
+	margin:60px;
+}
+.blog
+{
+	background-color: #EAEAEA;
+	align-content: center;
+	text-align: center;
+	margin:80px;
+	color: black;
+	
+}
+
+.blog-post
+{
+	background-color: white;
+	
+
+}
+
+.blog-post h3 
+{
+	font-size: 1.2em;
+	color: #5054B7;
+	
+}
+
+.blog-post p 
+{
+	font-size: 0.8em;
+	color: black;
+}
+
 body
 {
-    background-color: burlywood;
+	background-color: #EAEAEA;
 }
-h1
-{
-    color: aqua;
-}
-p
-{
-    background-color: black;
-    color: red;
-}
+
+
+
+
+
+
+
+

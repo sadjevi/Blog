@@ -51,8 +51,25 @@ if (isset($_GET['action']))
         {
             echo 'erreur lors de la saisie';
         }
-
     }
+    elseif ($_GET['action'] == 'logIn')
+    {
+        logIn();
+    }
+
+    elseif ($_GET['action'] == 'logInto')
+    {
+        logInto();
+    }
+
+    elseif ($_GET['action'] == 'adminPosts')
+    {
+        
+        adminPosts();
+        
+    }
+
+    
 }
 else
 {

@@ -10,7 +10,7 @@ class PostManager extends Connect
     {
 
         $db = $this->dbConnect();
-        $posts = $db->query('SELECT * FROM posts');
+        $posts = $db->query('SELECT * FROM posts ORDER BY posted_date DESC ');
 
         return $posts;
     }
