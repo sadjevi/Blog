@@ -1,9 +1,9 @@
 <?php
 
-require_once ('Model/Connect.php');
+require_once ('Model/DbManager.php');
 
 
-class CommentManager extends Connect
+class CommentManager extends DbManager
 {
 
     public function getComments($postId)

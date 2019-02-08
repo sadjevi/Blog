@@ -1,9 +1,9 @@
 <?php
 
-require_once ('Model/Connect.php');
+require_once ('Model/DbManager.php');
 
 
-class AdminManager extends connect
+class AdminManager extends DbManager
 {
 	public function logPass()
 	{

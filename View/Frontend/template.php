@@ -1,52 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $title ?></title>
+    <title>Foundation | Welcome</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="Public/css/style.css">
 </head>
-
 <body>
 
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="menu">
-            <li class="menu-text">aKindOfBlog</li>
-            <li><a href="#">hotels</a></li>
-            <li><a href="#">Restaurant</a></li>
-            <li><a href="#">Oenologie</a></li>
+            <li class="menu-text">Blog</li>
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
         </ul>
     </div>
 </div>
 
-<div class="primary"style="color:white">
+<div class="callout large primary">
     <div class="row column text-center">
-        <h1>hey you! Welcome </h1>
-
-            this blog is created only for ones who really know appreciate good things<br>
-            Hotels, restaurants, some champagnes ans wines....<br>
-            the others can just simply.....move on (ha ha ha..A private joke, don't worry guys)<br>
-            if you have any suggestions, don't hesitate to let me know 
-        </p>
+        <h1>Our Blog</h1>
+        <h2 class="subheader">Such a Simple Blog Layout</h2>
     </div>
 </div>
 
-
-<?= $content ?>
-
-
-
-<p style="text-align:center"><a href="index.php?action=logIn">administration du site</a></p>
-    <footer>
-        <?php if(isset($_SESSION['auth'])):?>
-            Vous êtes connectés en tant que <?= $_SESSION['login'];?>
-            <a href="index.php?action=logOut">se déconnecter</a>
-        <?php endif ?>
-    </footer>
-
+<div class="row medium-8 large-7 columns">
+    <div class="blog-post">
+        <h3>Awesome blog post title <small>3/6/2015</small></h3>
+        <img class="thumbnail" src="https://placehold.it/850x350">
+        <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+        <div class="callout">
+            <ul class="menu simple">
+                <li><a href="#">Author: Mike Mikers</a></li>
+                <li><a href="#">Comments: 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="blog-post">
+        <h3>Awesome blog post title <small>3/6/2015</small></h3>
+        <img class="thumbnail" src="https://placehold.it/850x350">
+        <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+        <div class="callout">
+            <ul class="menu simple">
+                <li><a href="#">Author: Mike Mikers</a></li>
+                <li><a href="#">Comments: 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="blog-post">
+        <h3>Awesome blog post title <small>3/6/2015</small></h3>
+        <img class="thumbnail" src="https://placehold.it/850x350">
+        <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+        <div class="callout">
+            <ul class="menu simple">
+                <li><a href="#">Author: Mike Mikers</a></li>
+                <li><a href="#">Comments: 3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="blog-post">
+        <h3>Awesome blog post title <small>3/6/2015</small></h3>
+        <img class="thumbnail" src="https://placehold.it/850x350">
+        <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
+        <div class="callout">
+            <ul class="menu simple">
+                <li><a href="#">Author: Mike Mikers</a></li>
+                <li><a href="#">Comments: 3</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+    $(document).foundation();
+</script>
 </body>
-    
-<html>
-
+</html>

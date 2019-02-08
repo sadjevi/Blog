@@ -5,32 +5,43 @@ require('Controller/frontend.php');
 require('Controller/backend.php');
 
 
-if (isset($_GET['action']))
+$frontController = new FrontController();
+$backController  = new BackController();
+
+
+isset($_GET['action']) ? $action = $_GET['action'] : $action = 'listMyPosts';
+if(isset($_GET['id']))
 {
-    if($_GET['action'] == 'listMyPosts')
-    {
-        listMyPosts();
-    }
+    $id = $_GET['id'];
+}
 
-    elseif($_GET['action'] == 'showPost')
-    {
-        if(isset($_GET['id']) && $_GET['id'] > 0)
-        {
-            showPost();
-        }
-        else
-        {
-            echo'aucun identifiant';
-        }
-    }
 
-    elseif ($_GET['action'] == 'addComment')
-    {
-        if(isset($_GET['id']) && $_GET['id'] > 0 )
+switch($action)
+
+{
+
+                                                    //   FRONTEND
+
+
+    case'listMyPosts';
+        $frontController->listMyPosts();
+    break;
+
+
+    case 'showPost';
+        if(isset($id) && $id > 0)
         {
-            if(!empty($_POST['author'] && !empty($_POST['content'])))
+            $frontController->showPost();
+        }
+    break;
+
+
+    case'addComment';
+        if(isset($id) && $id > 0)
+        {
+            if(!empty($_POST['author']) && !empty($_POST['content']))
             {
-                addComment($_GET['id'], $_POST['author'], $_POST['content']);
+                $frontController->addComment($id, $_POST['author'], $_POST['content']);
             }
             else
             {
@@ -39,42 +50,44 @@ if (isset($_GET['action']))
         }
         else
         {
-            echo'aucun identifiant';
+            echo 'erreur: aucun identifiant récupéré';
         }
-    }
-    elseif ($_GET['action'] == 'addPost')
-    {
-        if(!empty($_POST['title']) && !empty($_POST['content'] && !empty($_POST['img_link'])))
+    break;
+
+
+
+                                                       //   BACKEND
+
+    case'addPost';
+        if(!empty($_POST['title'] && !empty($_POST['content'] && $_POST['img_link'])))
         {
-            addPost($_POST['title'], $_POST['content'], $_POST['img_link']);
+            $backController->addPost($_POST['title'], $_POST['content'], $_POST['img_link']);
         }
         else
         {
-            echo 'erreur lors de la saisie';
+            echo 'erreur lors de votre saisie';
         }
-    }
-    elseif ($_GET['action'] == 'logIn')
-    {
-        logIn();
-    }
+    break;
 
-    elseif ($_GET['action'] == 'logInto')
-    {
-        logInto();
-    }
 
-    elseif ($_GET['action'] == 'adminPosts')
-    {
-        
-        adminPosts();
-        
-    }
+    case'logIn';
+        $backController->logIn();
+    break;
 
-    
-}
-else
-{
-    listMyPosts();
+
+    case'logInto';
+        $backController->logInto();
+    break;
+
+
+    case'adminPosts';
+        $backController->adminPosts();
+    break;
+
+
+    default:
+        echo"Erreur 404 - Oups, cette page n'existe pas, désolé, Bye Bye !";
+
 }
 
 

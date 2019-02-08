@@ -8,7 +8,7 @@
     <div class="presentation">
         <h2>#@KiNdOfLiFe$tYL€</h2>
         <p>
-            un petit recueil d'hotels òu j'ai séjourné mais aussi de restaurant òu j'ai eu l'occasion de manger
+            un petit recueil d'hotels òu j'ai séjourné mais aussi de restaurants òu j'ai eu l'occasion de manger
             et pour finir, une sélection de vins et de champagnes que j'ai appréciés...
         </p>
     </div>

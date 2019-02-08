@@ -1,9 +1,9 @@
 <?php
 
-require_once ('Model/Connect.php');
+require_once ('Model/DbManager.php');
 
 
-class PostManager extends Connect
+class PostManager extends DbManager
 {
     //retrievin all posts
     public function getPosts()

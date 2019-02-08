@@ -1,6 +1,6 @@
 <?php
 
-class Connect
+class DbManager
 {
     protected function dbConnect()
     {

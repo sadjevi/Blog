@@ -4,84 +4,69 @@ require_once ('Model/AdminManager.php');
 require_once ('Model/PostManager.php');
 require_once ('Model/CommentManager.php');
 
-function addPost($title, $content, $link)
+
+
+class BackController
 {
-    $postManager = new PostManager();
-    $bool = $postManager->newPost($title, $content, $link);
 
-    if($bool === false)
+    public function addPost($title, $content, $link)
     {
-        die('impossible d enregistrer le nouveau billet');
-    }
-    else
-    {
-        
-        require_once('View/Frontend/myPostsView.php');
-    }
-}
+        $postManager = new PostManager();
+        $bool        = $postManager->newPost($title, $content, $link);
 
-function logInto()
-{
-    $adminManager = new AdminManager;
-    $log = $adminManager->logPass();
-    $logged = password_verify($_POST['password'], $log['password']);
-
-    if($logged === false)
-    {
-        die('mauvaises entées');
-    }
-    else
-    {
-        if($logged && $_POST['login'] == $log['login'])
+        if($bool === false)
         {
-            $_SESSION['auth'] = true ;
-            $_SESSION['id']       = $log['id'];
-            $_SESSION['login'] = $log['login'];
-            $_SESSION['password'] = $log['password'];
+            die('impossible d enregistrer le nouveau billet');
         }
         else
         {
-            die('erreur');
+
+            require_once('View/Frontend/myPostsView.php');
         }
     }
-    header('location:index.php?action=adminPosts');
-    
+
+    public function logInto()
+    {
+        $adminManager = new AdminManager;
+        $log          = $adminManager->logPass();
+        $logged       = password_verify($_POST['password'], $log['password']);
+
+        if($logged === false)
+        {
+            die('mauvaises entées');
+        }
+        else
+        {
+            if($logged && $_POST['login'] == $log['login'])
+            {
+                $_SESSION['auth']     = true ;
+                $_SESSION['id']       = $log['id'];
+                $_SESSION['login']    = $log['login'];
+                $_SESSION['password'] = $log['password'];
+            }
+            else
+            {
+                die('erreur');
+            }
+        }
+        header('location:index.php?action=adminPosts');
+
+    }
+
+    public function logIn()
+    {
+        $adminManager = new AdminManager();
+        $log          = $adminManager->logPass();
+
+        require_once('view/Backend/authView.php');
+    }
+
+    public function adminPosts()
+    {
+        $postManager = new PostManager();
+        $posts       = $postManager->getPosts();
+
+        require_once('View/Backend/adminPostsView.php');
+    }
+
 }
-
-function logIn()
-{
-    $adminManager = new AdminManager();
-    $log          = $adminManager->logPass();
-
-    require_once('view/Backend/authView.php');
-}
-
-function adminPosts()
-{
-    $postManager = new PostManager();
-    $posts       = $postManager->getPosts();
-
-    require_once('View/Backend/adminPostsView.php');
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
