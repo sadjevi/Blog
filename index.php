@@ -4,6 +4,7 @@
 require('Controller/frontend.php');
 require('Controller/backend.php');
 
+
 if (isset($_GET['action']))
 {
     if($_GET['action'] == 'listMyPosts')

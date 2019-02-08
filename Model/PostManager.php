@@ -19,7 +19,7 @@ class PostManager extends Connect
     public function getPost($postId)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('SELECT id, title, content,posted_date FROM posts WHERE id = ? ');
+        $req = $db->prepare('SELECT id, title, content, img_link, posted_date FROM posts WHERE id = ? ');
         $req->execute(array($postId));
         $post = $req->fetch();
 

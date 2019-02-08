@@ -21,16 +21,22 @@ form .form-icons .fa {
 }
 .primary
 {
-	background-image: url('https://cdn.pixabay.com/photo/2016/01/09/18/27/old-1130731_1280.jpg');
+	background-image: url('../images/doors.jpg');
 	height: 30em;
+	color:white;
+}
+
+.primary h1
+{
+	color:white;
 }
 
 .top-bar
 {
 	background-color: black;
 	color: white;
-	height:4em;
-	padding:10px;
+	
+	
 }
 
 .top-bar li
@@ -79,7 +85,100 @@ form .form-icons .fa {
 body
 {
 	background-color: #EAEAEA;
+	width: auto;
 }
+
+.comment-section-container {
+  background-color: white;
+  color:black;
+
+  padding:30px;
+  
+}
+
+.comment-section-container h3
+{
+	text-align: center;
+	color:black;
+	font-size: 1.5em;
+}
+
+.comment-section-container img
+{
+	height:80px;
+}
+
+.comment-section-container p
+{
+	font-size: 0.8em;
+}
+
+
+
+.comment-section-author {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.comment-section-author .comment-section-name {
+  margin-left: 1rem;
+}
+
+.comment-section-author .comment-section-name p {
+  margin-bottom: 0;
+}
+
+.comment-section-box {
+  background-color: #e6e6e6;
+  padding: 1rem;
+}
+.comment-section-form
+{
+	margin:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

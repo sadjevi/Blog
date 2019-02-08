@@ -23,7 +23,9 @@
                 <p> + + + + </p>
                 <h3><?php echo $myPosts['title'] . '<br><small> le ' . $myPosts['posted_date']; ?></small></h3>
                 <img class="thumbnail" src="<?php echo $myPosts['img_link'];?>">
-                <p><?php echo $myPosts['content']; ?><br><em><a href="index.php?action=showPost&amp;id=<?=$myPosts['id'];?>">voir le billet </a></em></p>
+                <?= substr($myPosts['content'], 0, 300); ?> ...<br><em><a href="index.php?action=showPost&amp;id=<?=$myPosts['id'];?>
+                
+                ">Lire la suite</a></em></p>
                 <div class="empty">
                 </div>
             <?php endwhile ;?>

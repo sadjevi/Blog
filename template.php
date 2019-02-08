@@ -21,15 +21,10 @@
     </div>
 </div>
 
-<div class="primary"style="color:white">
+<div class="primary">
     <div class="row column text-center">
-        <h1>hey you! Welcome </h1>
-
-            this blog is created only for ones who really know appreciate good things<br>
-            Hotels, restaurants, some champagnes ans wines....<br>
-            the others can just simply.....move on (ha ha ha..A private joke, don't worry guys)<br>
-            if you have any suggestions, don't hesitate to let me know 
-        </p>
+        <h1>Places to see...</h1>
+        <h2 class="subheader"></h2>
     </div>
 </div>
 
